@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: course-catalog-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true #entity 있는 것들 읽어서 테이블 만들어 줌.
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+message: Hello from default profile
+
+# 이렇게 한 yml 파일 내에서 다양한 환경 설정할 수 있지만 따로 하는게 당연히?나은듯
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: prod
+#message: Hello from prod profile
